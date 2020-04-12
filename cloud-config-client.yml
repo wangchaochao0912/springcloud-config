@@ -1,0 +1,29 @@
+spring:
+  profiles:
+    active:
+      -dev
+---
+server:
+  port: 8201
+spring:
+  profiles: dev
+  application:
+    name: cloud-config-client
+eureka:
+  client:
+    register-with-eureka: true  #表示是否向服务中心注册自己
+    fetch-registry: true      #表示是否在监控中心中展示自己
+    service-url:    #设置与eureka服务交互的地址
+      defaultZone: http://eureka7001.com:7001/eureka/
+      #,http://eureka7002.com:7002/eureka/,http://eureka7003.com:7003/eureka/
+  instance:
+    #在注册中心展示的id
+    instance-id: configCenter3344
+    #是否展示ip
+    prefer-ip-address: true
+---
+spring:
+  profiles: test
+  application:
+    name:
+#请保存为UTF-8   
