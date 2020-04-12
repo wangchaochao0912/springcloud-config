@@ -1,15 +1,15 @@
 spring:
   profiles:
     active:
-      -dev
+    - dev
 ---
 spring:
   profiles: dev
   application:
-    name:  
+    name: cloud-config-wangcc-dev  
 ---
 spring:
   profiles: test
   application:
-    name:
+    name: cloud-config-wangcc-test  
 #请保存为UTF-8   
